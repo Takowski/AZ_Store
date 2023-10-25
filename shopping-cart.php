@@ -10,13 +10,20 @@
   <main>
     <?php
   ob_start();
-  $jsonFile = './assets/json/card.json';
+  $jsonFile = './assets/json/cart.json';
    function createItem ($json, $id) {
+    $json = file_get_contents($jsonFile);
     $json = json_decode($json, true);
-    array_push($json, $id);
     $item = $json[$id];
     return $item;
-   }
+   };
+
+   function shoppingCart () {
+    ob_clean();
+    $json = file_get_contents($jsonFile);
+    $json = json_decode($json, true);
+    $total = 0;
+   };
     ?>
   </main>
 
