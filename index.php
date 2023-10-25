@@ -34,7 +34,6 @@
       if ($catalog === null) {
         echo 'Error decoding catalog data';
       } else {
-
         foreach ($catalog as $item) {
           echo '<img src="' . $item['image_url'] . '" alt="' . $item['product'] . '">';
           echo '<h2>' . $item['id'] . '</h2>';
@@ -42,20 +41,21 @@
           echo '<p>Price: $' . $item['price'] . '</p>';
           echo '<form action="add-to-cart.php" method="post">';
           echo '<input type="hidden" name="item_id" value="' . $item['id'] . '">';
-          echo '<button type="submit">Add to cart</button>';
+          echo '<input type="number" name="quantity" value="1" min="1">';
+          echo '<button type="submit" onclick="addToCart(' . $item['id'] . ', ' . $item['price'] . ', ' . $catalog . ')">Add to cart</button>';
           echo '</form>';
           echo '<hr>';
         }
       }
-    }
+    };
     ?>
   </main>
   <picture>
     <img src="assets/style/img/shoe_two.png" alt=" a blurple shoe">
     <h1> WE PROVIDE YOU THE<span>BEST</span>QUALITY.</h1>
     <quote>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-       Vel est labore nobis sed excepturi ut alias porro sapiente aspernatur
-        aliquam consequuntur voluptates, quos veritatis quibusdam?
+      Vel est labore nobis sed excepturi ut alias porro sapiente aspernatur
+      aliquam consequuntur voluptates, quos veritatis quibusdam?
     </quote>
   </picture>
   <?php include 'footer-display.php' ?>
