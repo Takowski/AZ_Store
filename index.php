@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nique shoes</title>
 </head>
+<!-- Style temporaire -->
 <style>
   img {
     width: 100px;
