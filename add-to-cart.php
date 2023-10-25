@@ -49,7 +49,7 @@
 <?php
 session_start();
 
-$products = json_decode(file_get_contents('cart.json'), true);
+$products = json_decode(file_get_contents('catalog.json'), true);
 
 function addToCart($product_id, $quantity, $products) {
     if (!isset($_SESSION['cart'])) {
