@@ -1,1 +1,26 @@
-{"1":{"product":"NIKE Air","price":234,"image_url":".\/assets\/img\/shoe_one.png","number":1},"2":{"product":"NIKE Air","price":234,"image_url":".\/assets\/img\/shoe_one.png","number":1},"3":{"product":"NIKE Air","price":234,"image_url":".\/assets\/img\/shoe_one.png","number":1}}
+[
+  {
+    "id": 1,
+    "product": "Nique Air",
+    "price": 234,
+    "image_url": "assets/style/img/shoe_one.png"
+  },
+  {
+    "id": 2,
+    "product": "Nique Air",
+    "price": 234,
+    "image_url": "assets/style/img/shoe_one.png"
+  },
+  {
+    "id": 3,
+    "product": "Nique Air",
+    "price": 234,
+    "image_url": "assets/style/img/shoe_one.png"
+  },
+  {
+    "id": 4,
+    "product": "Nique Air",
+    "price": 234,
+    "image_url": "assets/style/img/shoe_one.png"
+  }
+]
