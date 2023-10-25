@@ -4,7 +4,6 @@
 
 //     $cartData = file_exists($cartFile) ? json_decode(file_get_contents($cartFile), true) : [];
 
-   
 //     if (isset($cartData[$product_id])) {
 //         $cartData[$product_id] += $quantity;
 //     } else {
@@ -48,6 +47,7 @@
 
 
 <?php
+session_start();
 
 $products = json_decode(file_get_contents('cart.json'), true);
 
