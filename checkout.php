@@ -39,6 +39,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $emailErr = "Invalid email format";
     }
+    if (empty($address)) {
+        $addressErr = "Address is required";
+    }
+    if (empty($city)) {
+        $cityErr = "City is required";
+    }
+    if (empty($zipcode)) {
+        $zipcodeErr = "Zip code is required";
+    }
+    if (empty($country)) {
+        $countryErr = "Country is required";
+    }
 
     // If there are no errors, submit the form
     if (empty($firstnameErr) && empty($lastnameErr) && empty($emailErr) && empty($addressErr) && empty($cityErr) && empty($zipcodeErr) && empty($countryErr)) {
@@ -123,4 +135,4 @@ function sanitize_input($data) {
 
     <input type="submit" value="Submit">
 </form>
-<?php include 'footer.php' ?>
+<?php include 'footer-display.php' ?>
