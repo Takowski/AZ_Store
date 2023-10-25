@@ -8,7 +8,16 @@
 <body>
   <?php include 'header-display.php' ?>
   <main>
-
+    <?php
+  ob_start();
+  $jsonFile = './assets/json/card.json';
+   function createItem ($json, $id) {
+    $json = json_decode($json, true);
+    array_push($json, $id);
+    $item = $json[$id];
+    return $item;
+   }
+    ?>
   </main>
 
 </body>
