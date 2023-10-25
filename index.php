@@ -17,6 +17,7 @@
 
 <body>
   <?php include 'header-display.php' ?>
+  
   <main>
     <?php
     session_start();
@@ -39,11 +40,8 @@
           echo '<h2>' . $item['id'] . '</h2>';
           echo '<p>' . $item['product'] . '</p>';
           echo '<p>Price: $' . $item['price'] . '</p>';
-          echo '<form action="add-to-cart.php" method="post">';
-          echo '<input type="hidden" name="item_id" value="' . $item['id'] . '">';
-          echo '<input type="number" name="quantity" value="1" min="1">';
-          echo '<button type="submit" onclick="addToCart(' . $item['id'] . ', ' . $item['price'] . ', ' . $catalog . ')">Add to cart</button>';
-          echo '</form>';
+          echo '<div id="add-to-cart-' . $item['id'] . '">';
+          echo '<button type="submit" name="add_item" value="' . $item['id'] . '">Add to cart</button>';
           echo '<hr>';
         }
       }
