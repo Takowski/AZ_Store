@@ -40,6 +40,7 @@
           echo '<h2>' . $item['id'] . '</h2>';
           echo '<p>' . $item['product'] . '</p>';
           echo '<p>Price: $' . $item['price'] . '</p>';
+          echo '<form action="add-to-cart.php" method="post">';
           echo '<input type="hidden" name="item_id" value="' . $item['id'] . '">';
           echo '<button type="submit">Add to cart</button>';
           echo '</form>';
