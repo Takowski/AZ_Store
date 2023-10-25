@@ -1,5 +1,6 @@
 <?php include 'add-to-cart.php' ?>
 <?php
+session_start();
 // Initialize variables with empty values
 $firstname =
     $lastname =
