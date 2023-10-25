@@ -6,6 +6,10 @@
   <title>Nique shoes</title>
 </head>
 <body>
-  <main></main>
+  <main>
+
+  <?php include 'products.php'    ?>
+
+  </main>
 </body>
 </html>
