@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
@@ -125,8 +125,10 @@ if (isset($_POST['Substract_Number'])) {
     <main>
         <?php
         displayShoppingCart();
-        createCartItem(0);
-        createCartItem(1);
+        // createCartItem(0);
+        if (isset($_SESSION['visited'])) {
+            echo '<h1>Shopping cart</h1>';
+        }
         ?>
         <form action='checkout.php'>
             <button class='Cart__Confirm'>Confirm</button>
