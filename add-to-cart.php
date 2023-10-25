@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 function addToCart($product_id, $quantity) {
     $cartFile = 'cart.json';
 
@@ -21,6 +21,6 @@ if (isset($_POST['productId']) && isset($_POST['quantity'])) {
     addToCart($product_id, $quantity);
 } 
 
-?> -->
+?> 
 
 
