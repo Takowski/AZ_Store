@@ -39,22 +39,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $emailErr = "Invalid email format";
     }
-    if (empty($address)) {
-        $addressErr = "Address is required";
-    }
-    if (empty($city)) {
-        $cityErr = "City is required";
-    }
-    if (empty($zipcode)) {
-        $zipcodeErr = "Zip code is required";
-    }
-    if (empty($country)) {
-        $countryErr = "Country is required";
-    }
 
     // If there are no errors, submit the form
     if (empty($firstnameErr) && empty($lastnameErr) && empty($emailErr) && empty($addressErr) && empty($cityErr) && empty($zipcodeErr) && empty($countryErr)) {
-        // Do something with the form data, such as saving it to a database
+        // Read the existing JSON data from the file
+        $json_data = file_get_contents('assets/json/command.json');
+
+        // Convert the JSON data to an array
+        $data_array = json_decode($json_data, true);
+
+        // Get the last command number and increment it
+        $last_command_number = end($data_array)['command_number'];
+        if ($last_command_number == null) {
+            $command_number = 1;
+        } else {
+            $command_number = $last_command_number + 1;
+        }
+
+        // Create an array with the form data and the new command number
+        $data = array(
+            'command_number' => $command_number,
+            'firstname' => $firstname,
+            'lastname' => $lastname,
+            'email' => $email,
+            'address' => $address,
+            'city' => $city,
+            'zipcode' => $zipcode,
+            'country' => $country
+        );
+
+        // Add the new data to the existing array
+        array_push($data_array, $data);
+
+        // Convert the array to JSON format
+        $json_data = json_encode($data_array);
+
+        // Write the JSON data to the file
+        file_put_contents('assets/json/command.json', $json_data);
+
         // Redirect the user to a confirmation page
         header("Location: confirmation.php");
         exit();
@@ -62,8 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Sanitize input data function
-function sanitize_input($data)
-{
+function sanitize_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
