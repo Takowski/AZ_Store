@@ -7,7 +7,9 @@
   <title>Nique shoes</title>
 </head>
 
+
 <body>
+  <?php include 'header-display.php' ?>
   <main>
     <?php
     session_start();

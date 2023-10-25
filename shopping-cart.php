@@ -124,7 +124,7 @@ if (isset($_POST['Substract_Number'])) {
     <main>
         <?php
         displayShoppingCart();
-        // createCartItem(1);
+        createCartItem(1);
         ?>
         <form action='checkout.php'>
             <button class='Cart__Confirm'>Confirm</button>
