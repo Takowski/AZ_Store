@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['cart'])) {
+  $_SESSION['cart'] = [];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,16 +24,12 @@
 </style>
 
 <body>
+  
   <?php include 'header-display.php' ?>
 
   <main>
     <?php
-    session_start();
-
-    if (!isset($_SESSION['cart'])) {
-      $_SESSION['cart'] = [];
-    }
-
+   
     $json_data = file_get_contents('assets/json/catalog.json');
 
 
@@ -58,8 +62,17 @@
 <?php
 if (isset($_POST['add_item'])) {
   $item_id = $_POST['item_id'];
-  if (!in_array($item_id, $_SESSION['cart'])) {
-    $_SESSION['cart'][] = $item_id;
+  if (!isset($_SESSION['cart'][$item_id])) {
+    $item = $catalog[$item_id];
+    $_SESSION['cart'][$item_id] = array(
+      'id' => $item['id'],
+      'product' => $item['product'],
+      'price' => $item['price'],
+      'image_url' => $item['image_url'],
+      'number' => 1
+    );
+  } else {
+    $_SESSION['cart'][$item_id]['number']++;
   }
 }
 ?>
