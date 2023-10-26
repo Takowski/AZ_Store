@@ -1,0 +1,202 @@
+/*!
+*   ___  ___ ___ ___   ___ _      ___   _____  ___   ___  _  __
+*  / __|/ __/ __/ __| | _ \ |    /_\ \ / / _ )/ _ \ / _ \| |/ /
+*  \__ \ (__\__ \__ \ |  _/ |__ / _ \ V /| _ \ (_) | (_) | ' < 
+*  |___/\___|___/___/ |_| |____/_/ \_\_| |___/\___/ \___/|_|\_\   *   
+*
+* # Scss Playbook 1.0.0
+* http://matthewelsom.com/blog/simple-scss-playbook.html
+*
+* Released under the CC0 1.0 Universal license
+* https://creativecommons.org/publicdomain/zero/1.0/
+*
+*
+* Files in assets/vendor/bourbon 
+* Bourbon 4.2.6
+* http://bourbon.io
+* Copyright 2011-2015 thoughtbot, inc.
+* MIT License
+*
+* Files in assets/vendor/neat
+* Neat 1.7.4
+* http://neat.bourbon.io
+* Copyright 2012-2015 thoughtbot, inc.
+* MIT License
+*
+* Files in assets/vendor/fontawesome 
+* Font Awesome 4.6.3 by @davegandy
+* http://fontawesome.io
+* MIT License
+*
+* Files in assets/vendor/normalize 
+* normalize.css v3.0.3
+* http://github.com/necolas/normalize.css
+* MIT License
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15%;
+  margin-bottom: 3%;
+  padding-bottom: 2%;
+  align-items: center;
+}
+header .column {
+  flex: 1;
+}
+header .nav_top ul li {
+  display: inline;
+}
+header p {
+  font-size: 0.4rem;
+  margin-top: 4%;
+}
+header li {
+  font-size: 0.3rem;
+}
+header img {
+  height: 0.5rem;
+  width: 0.5rem;
+  padding-top: 2%;
+}/*# sourceMappingURL=style.css.map */

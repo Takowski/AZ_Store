@@ -1,0 +1,41 @@
+header {
+    background-color: aqua;
+    display: flex; 
+    justify-content: space-between; 
+    padding: 0 15%;
+    margin-bottom: 3%;
+    padding-bottom: 2%;
+    align-items: center;
+
+.column {
+    flex: 1;
+}
+
+.nav_top ul li {
+    display: inline;
+}
+    p{
+
+        font-size: 0.4rem;
+        margin-top: 4%;
+
+
+    }
+    li{
+
+        font-size: 0.3rem;
+    }
+    img{
+
+
+        height: 0.5rem;
+        width: 0.5rem;
+        padding-top: 2%;
+       
+        
+        
+
+    }
+
+}
+
