@@ -1,6 +1,5 @@
-<?php include 'add-to-cart.php' ?>
+<?php include 'shopping-cart.php' ?>
 <?php
-session_start();
 // Initialize variables with empty values
 $firstname =
     $lastname =
@@ -132,9 +131,16 @@ function sanitize_input($data)
     <span class="error"><?php echo $zipcodeErr; ?></span><br>
 
     <label for="country">Country:</label>
-    <input type="text" id="country" name="country" value="<?php echo $country; ?>">
-    <span class="error"><?php echo $countryErr; ?></span><br>
+    <select name='country' id='country'>
+  <?php
+  $locations = json_decode(file_get_contents('assets/json/locations.json'), true);
+  foreach ($locations as $location) {
+    echo "<option value='{$location['country']}'>{$location['country']}</option>";
+  }
+  ?>
+</select>
+<span class="error"><?php echo $countryErr; ?></span><br>
 
-    <input type="submit" value="Submit">
+<input type="submit" value="Submit">
 </form>
 <?php include 'footer-display.php' ?>
