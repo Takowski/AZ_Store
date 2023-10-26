@@ -7,11 +7,16 @@ if (!isset($_SESSION['cart'])) {
 
 function createCartItem($id)
 {
-    $catalog = json_decode(file_get_contents('assets/json/catalog.json'), true);
-    $item = $catalog[$id];
-    $item['number'] = 1;
-    array_push($_SESSION['cart'], $item);
+    if (isset($_SESSION['catalog'])) {
+        $catalog = $_SESSION['catalog'];
+        if (array_key_exists($id, $catalog)) {
+            $item = $catalog[$id];
+            $item['number'] = 1;
+            array_push($_SESSION['cart'], $item);
+        }
+    }
 }
+
 
 function removeCartItem($index)
 {
@@ -125,7 +130,7 @@ if (isset($_POST['Substract_Number'])) {
     <main>
         <?php
         displayShoppingCart();
-        createCartItem(0);
+        // createCartItem(0);
         ?>
         <form action='checkout.php'>
             <button class='Cart__Confirm'>Confirm</button>
