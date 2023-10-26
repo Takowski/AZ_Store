@@ -125,10 +125,7 @@ if (isset($_POST['Substract_Number'])) {
     <main>
         <?php
         displayShoppingCart();
-        // createCartItem(0);
-        if (isset($_SESSION['visited'])) {
-            echo '<h1>Shopping cart</h1>';
-        }
+        createCartItem(0);
         ?>
         <form action='checkout.php'>
             <button class='Cart__Confirm'>Confirm</button>
