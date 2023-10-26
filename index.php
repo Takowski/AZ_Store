@@ -17,7 +17,7 @@
 
 <body>
   <?php include 'header-display.php' ?>
-  
+
   <main>
     <?php
     session_start();
@@ -50,7 +50,7 @@
   </main>
   <picture>
     <img src="assets/style/img/shoe_two.png" alt=" a blurple shoe">
-    <h1> WE PROVIDE YOU THE<span>BEST</span>QUALITY.</h1>
+    <h1> WE PROVIDE YOU THE<span> BEST </span> QUALITY.</h1>
     <quote>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
       Vel est labore nobis sed excepturi ut alias porro sapiente aspernatur
       aliquam consequuntur voluptates, quos veritatis quibusdam?
