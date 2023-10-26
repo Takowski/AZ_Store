@@ -20,7 +20,24 @@
 <body>
   <?php include 'header-display.php' ?>
 
+  <div class="container_shoe">
+
+    <div class="container_shoe_left">
+      <h1>SHOE THE <br> RIGHT <span> ONE</span></h1>
+      <button>See our store</button>
+    </div>
+
+    <div class="container_shoe_right">
+      <img src="assets/style/img/shoe_one.png" alt=" a shoe">
+      <h2>NIQUE</h2>
+    </div>
+      
+  </div>
+
+<h3><span>Our </span>last products</h3>
+
   <main>
+    
     <?php
     session_start();
 
@@ -52,7 +69,7 @@
   </main>
   <picture>
     <img src="assets/style/img/shoe_two.png" alt=" a blurple shoe">
-    <h1> WE PROVIDE YOU THE<span> BEST </span> QUALITY.</h1>
+    <h2> WE PROVIDE YOU THE<span> BEST </span> QUALITY.</h2>
     <quote>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
       Vel est labore nobis sed excepturi ut alias porro sapiente aspernatur
       aliquam consequuntur voluptates, quos veritatis quibusdam?
