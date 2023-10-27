@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 include 'shopping-cart.php' ?>
 <?php
 // Initialize variables with empty values
@@ -93,6 +93,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'city' => $city,
             'zipcode' => $zipcode,
             'country' => $country,
+            'total cart' => $_SESSION['total'],
+            'vat_rate' => $vatRate,
             'price' => $totalWithVat
         );
 
@@ -104,6 +106,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Write the JSON data to the file
         file_put_contents('assets/json/command.json', $json_data);
+
+        // Destroy the session
+        session_destroy();
 
         // Redirect the user to a confirmation page
         header("Location: confirmation.php?vat_rate=$vat_rate");
