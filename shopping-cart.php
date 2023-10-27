@@ -73,7 +73,7 @@ function displayShoppingCart()
         }
         echo "</section>";
         if ($total != 0) {
-            echo "<span class='Cart__Item__Total'>$total €</span>";
+            echo "<span class='Cart__Item__Total'>Total : $total €</span>";
             $_SESSION['total'] = $total;
         }
     }
@@ -127,7 +127,7 @@ if (isset($_POST['Substract_Number'])) {
     <main>
         <?php
         displayShoppingCart();
-        echo "<span class='Cart__Item__Number'>$item[number]</span>";
+        // echo "<span class='Cart__Item__Number'>$item[number]</span>";
         // createCartItem(0);
         ?>
         <form action='checkout.php'>
