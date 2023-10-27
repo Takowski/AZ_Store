@@ -1,4 +1,11 @@
 [
+
+  {
+    "id": 0,
+    "product": "Nique Air",
+    "price": 234,
+    "image_url": "assets/style/img/shoe_one.png"
+  },
   {
     "id": 1,
     "product": "Nique Air",
@@ -13,12 +20,6 @@
   },
   {
     "id": 3,
-    "product": "Nique Air",
-    "price": 234,
-    "image_url": "assets/style/img/shoe_one.png"
-  },
-  {
-    "id": 4,
     "product": "Nique Air",
     "price": 234,
     "image_url": "assets/style/img/shoe_one.png"

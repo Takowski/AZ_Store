@@ -1,6 +1,7 @@
-<?php include 'add-to-cart.php' ?>
 <?php
 session_start();
+include 'shopping-cart.php' ?>
+<?php
 // Initialize variables with empty values
 $firstname =
     $lastname =
@@ -69,7 +70,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $command_number = $last_command_number + 1;
         }
 
-        // Create an array with the form data and the new command number
+        // Get the VAT rate for the selected country
+        $taxes = json_decode(file_get_contents('assets/json/locations.json'), true);
+        $vatRate = null;
+        foreach ($taxes as $taxe) {
+            if ($taxe['country'] == $country) {
+                $vatRate = $taxe['vat_rate'];
+                break;
+            }
+        }
+
+        // Calculate the total price with VAT
+        $totalWithVat = $_SESSION['total'] * (1 + $vatRate / 100);
+
+        // Create an array with the form data, the new command number and the total price with VAT
         $data = array(
             'command_number' => $command_number,
             'firstname' => $firstname,
@@ -78,7 +92,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'address' => $address,
             'city' => $city,
             'zipcode' => $zipcode,
-            'country' => $country
+            'country' => $country,
+            'price' => $totalWithVat
         );
 
         // Add the new data to the existing array
@@ -91,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         file_put_contents('assets/json/command.json', $json_data);
 
         // Redirect the user to a confirmation page
-        header("Location: confirmation.php");
+        header("Location: confirmation.php?vat_rate=$vat_rate");
         exit();
     }
 }
@@ -132,8 +147,17 @@ function sanitize_input($data)
     <span class="error"><?php echo $zipcodeErr; ?></span><br>
 
     <label for="country">Country:</label>
-    <input type="text" id="country" name="country" value="<?php echo $country; ?>">
+    <select name='country' id='country'>
+        <?php
+        $locations = json_decode(file_get_contents('assets/json/locations.json'), true);
+        foreach ($locations as $location) {
+            echo "<option value='{$location['country']}'>{$location['country']}</option>";
+        };
+
+        ?>
+    </select>
     <span class="error"><?php echo $countryErr; ?></span><br>
+
 
     <input type="submit" value="Submit">
 </form>
