@@ -25,7 +25,7 @@ if (!isset($_SESSION['cart'])) {
   }
 </style>
 
-<body>
+<body class="body_index">
 
   <?php include 'header-display.php' ?>
 

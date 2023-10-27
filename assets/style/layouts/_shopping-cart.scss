@@ -1,0 +1,71 @@
+.body_cart{
+
+    background-color: white;
+    font-family: $poppins;
+
+    .Cart__Item{
+
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    .Cart__Item__Image{
+        height: 8vh;
+        width: 8vh;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        margin-left: 5px;
+    }
+    .Cart__Item__Product{
+    margin-top: 45px;
+    margin-left: 10px;
+    font-size: 0.9rem;
+    }
+
+    .Cart__Item__Price{
+        margin-top: 85px;
+        margin-left: 10px; 
+        font-size: 0.9rem;
+    }
+    
+    .Cart__Item__Substract{
+        margin-top: 45px;
+        margin-left: 10px;
+        box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+        background-color: white;
+        border: none;
+        border-radius: 6px;
+        color: black;
+        cursor: pointer;
+    }
+
+    .Cart__Item__Add{
+        margin-top: 45px;
+        margin-left: 10px;
+        box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+        background-color: white;
+        border: none;
+        border-radius: 6px;
+        color: black;
+        cursor: pointer;
+    }
+
+    .Cart__Item__Remove{
+        margin-top: 40px;
+        margin-left: 10px;
+        font-size: 0.6rem;
+        height: 1.5rem;
+        width: 2rem;
+        box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+        background-color: red;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        cursor: pointer;
+}
+.Cart__Item__Remove:hover{
+
+    background-color: rgb(241, 7, 7);
+}
+}

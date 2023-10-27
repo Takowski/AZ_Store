@@ -52,7 +52,7 @@ function displayShoppingCart()
             echo "<div class='Cart__Item'>";
             echo "<img class='Cart__Item__Image' src='$item[image_url]' alt='Picture of a shoe'>";
             echo "<span class='Cart__Item__Product'>$item[product]</span>";
-            echo "<span class='Cart__Item__Price'>$price € </span>";
+            echo "<span class='Cart__Item__Price'>$price €</span>";
 
             echo '<form action="shopping-cart.php" method="post">';
             echo "<input type='hidden' name='Substract_Number' value='$index'>";
@@ -112,16 +112,17 @@ if (isset($_POST['Substract_Number'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping cart of NIQUE</title>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
 </head>
 
-<body>
+<body class="body_cart">
     <!-- Style temporaire image trop grande -->
-    <style>
+    <!-- <style>
         img {
             width: 100px;
             height: 100px;
         }
-    </style>
+    </style> -->
     <?php include 'header-display.php' ?>
     <main>
         <?php
