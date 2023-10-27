@@ -1,1 +1,22 @@
-[{"command_number":1,"firstname":"Comblez","lastname":"Michel","email":"st.comblez@gmail.com","address":"Rue de Saint-Lazare","city":"Mons","zipcode":"7000","country":"Belgique"},{"command_number":2,"firstname":"Comblez","lastname":"Michel","email":"st.comblez@gmail.com","address":"Rue de Saint-Lazare","city":"Mons","zipcode":"7000","country":"Belgique"},{"command_number":3,"firstname":"moncul","lastname":"adroite","email":"test@test.fr","address":"","city":"","zipcode":"","country":""}]
+[
+  {
+    "command_number": 1,
+    "firstname": "Comblez",
+    "lastname": "Michel",
+    "email": "st.comblez@gmail.com",
+    "address": "Rue de Saint-Lazare",
+    "city": "Mons",
+    "zipcode": "7000",
+    "country": "Belgique"
+  },
+  {
+    "command_number": 2,
+    "firstname": "Comblez",
+    "lastname": "Michel",
+    "email": "st.comblez@gmail.com",
+    "address": "Rue de Saint-Lazare",
+    "city": "Mons",
+    "zipcode": "7000",
+    "country": "Belgique"
+  }
+]

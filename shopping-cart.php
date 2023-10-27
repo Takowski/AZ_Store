@@ -74,6 +74,7 @@ function displayShoppingCart()
         echo "</section>";
         if ($total != 0) {
             echo "<span class='Cart__Item__Total'>$total €</span>";
+            $_SESSION['total'] = $total;
         }
     }
 }
@@ -126,9 +127,6 @@ if (isset($_POST['Substract_Number'])) {
         <?php
         displayShoppingCart();
         // createCartItem(0);
-        if (isset($_SESSION['visited'])) {
-            echo '<h1>Shopping cart</h1>';
-        }
         ?>
         <form action='checkout.php'>
             <button class='Cart__Confirm'>Confirm</button>
