@@ -151,6 +151,21 @@ body{
         justify-content: center;
         align-items: center;
         margin-top: 35px;
+
+        .review_one{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .review_two{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .review_three{
+            display: flex;
+            flex-wrap: wrap;
+        }
     
         img{
 
@@ -165,8 +180,9 @@ body{
             display: flex;
             justify-content: center;
             margin-top: 5px;
-            font-size: 0.3rem;
-            margin-right: 20px;
+            font-size: 0.4rem;
+           
+    
         }
 
         p{

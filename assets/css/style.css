@@ -290,6 +290,18 @@ body .reviews {
   align-items: center;
   margin-top: 35px;
 }
+body .reviews .review_one {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .reviews .review_two {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .reviews .review_three {
+  display: flex;
+  flex-wrap: wrap;
+}
 body .reviews img {
   border-radius: 50%;
   height: 2rem;
@@ -300,8 +312,7 @@ body .reviews h3 {
   display: flex;
   justify-content: center;
   margin-top: 5px;
-  font-size: 0.3rem;
-  margin-right: 20px;
+  font-size: 0.4rem;
 }
 body .reviews p {
   display: flex;
