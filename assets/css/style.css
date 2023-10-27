@@ -258,6 +258,11 @@ body main button {
   color: white;
   cursor: pointer;
 }
+body main span {
+  border: 1px solid white;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 body picture {
   display: flex;
   justify-content: center;

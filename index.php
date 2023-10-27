@@ -67,14 +67,15 @@ if (!isset($_SESSION['cart'])) {
         foreach ($catalog as $item) {
           echo '<img src="' . $item['image_url'] . '" alt="' . $item['product'] . '">';
           echo '<h2>' . $item['id'] . '</h2>';
-          echo '<p>' . $item['product'] . '</p>';
-          echo '<p>Price: $' . $item['price'] . '</p>';
+          echo '<p class="name-shoe-main">' . $item['product'] . '</p>';
+          echo '<p class="price-shoe-main">$' . $item['price'] . '</p>';
           echo '<form method="post">';
           echo '<input type="hidden" name="item_id" value="' . $item['id'] . '">';
           echo '<button type="submit" name="add_item" value="Add to cart">Add to cart</button>';
           echo '</form>';
-          echo '<hr>';
-          echo '<pre>' . print_r($_SESSION) . '</pre>';
+          echo '<span class="span-main-shoe"></span>';
+          // echo '<hr>';
+          // echo '<pre>' . print_r($_SESSION) . '</pre>';
         }
       }
     };
