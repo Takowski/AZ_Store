@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php
 echo '<header>
 <p>Nique Store</p>
@@ -11,3 +13,5 @@ echo '<header>
 </nav>
 <a href="shopping-cart.php"><img src="./assets/style/img/shopping-cart.svg"></a>
 </header>';
+
+echo '<span>' . array_sum(array_column($_SESSION['cart'], 'number')) . '</span>'; ?>
