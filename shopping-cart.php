@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
@@ -112,7 +112,7 @@ if (isset($_POST['Substract_Number'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping cart of NIQUE</title>
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 </head>
 
 <body class="body_cart">

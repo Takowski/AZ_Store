@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 
 if (!isset($_SESSION['cart'])) {
   $_SESSION['cart'] = [];
@@ -13,7 +13,7 @@ if (!isset($_SESSION['cart'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nique shoes</title>
-  <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
 </head>
 <!-- Style temporaire -->
@@ -40,16 +40,16 @@ if (!isset($_SESSION['cart'])) {
       <img src="assets/style/img/shoe_one.png" alt=" a shoe">
       <h2>NIQUE</h2>
     </div>
-      
+
   </div>
 
-<h3><span>Our </span>last products</h3>
+  <h3><span>Our </span>last products</h3>
 
   <main>
-    
+
     <?php
 
-//get the information of the products from the json file
+    //get the information of the products from the json file
     $json_data = file_get_contents('assets/json/catalog.json');
 
 
@@ -98,7 +98,7 @@ if (!isset($_SESSION['cart'])) {
           'number' => 1
         );
         // if the item is already in the cart increase the quantity by 1
-      } else { 
+      } else {
         $_SESSION['cart'][$item_id]['number']++;
       }
     }
