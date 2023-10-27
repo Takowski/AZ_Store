@@ -216,8 +216,9 @@ body .container_shoe .container_shoe_right h2 {
   left: 10%;
   font-weight: bold;
   opacity: 0.1;
-  -webkit-text-stroke: 5px solid white;
   color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 body .container_shoe .container_shoe_right img {
   height: 19vh;
@@ -234,7 +235,81 @@ body h3 span {
 body main {
   display: grid;
   justify-content: center;
-  line-height: 1.5rem;
+  line-height: 2rem;
+}
+body main h2 {
+  display: none;
+}
+body main .name-shoe-main {
+  font-weight: bold;
+  color: whitesmoke;
+}
+body main .price-shoe-main {
+  font-style: italic;
+}
+body main button {
+  height: 1.4rem;
+  width: 3rem;
+  font-size: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset, rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+  background-image: linear-gradient(to right, #0daff0, #0579a7, #0e56c2, #1010d1);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+body picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body picture img {
+  width: 22vh;
+  height: 22vh;
+  margin-top: 25px;
+}
+body picture h2 {
+  font-size: 1rem;
+  margin-top: 15px;
+}
+body picture h2 span {
+  color: rgb(42, 106, 224);
+}
+body picture quote {
+  font-size: 0.4rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+  margin-left: 55px;
+  margin-right: 55px;
+  opacity: 0.5;
+}
+body .reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+body .reviews img {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  margin-left: 35px;
+}
+body .reviews h3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  font-size: 0.3rem;
+  margin-right: 20px;
+}
+body .reviews p {
+  display: flex;
+  justify-content: center;
+  font-size: 0.4rem;
+  margin-left: 15px;
+  margin-right: 15px;
+  opacity: 0.4;
 }
 
 header {
@@ -268,4 +343,24 @@ header img {
   width: 0.5rem;
   margin-top: 0.7rem;
   filter: invert(100%);
+}
+
+.nav_bot ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 0.4rem;
+}
+
+.nav_bot li {
+  flex: 0.1;
+  text-align: center;
+}
+
+.nav_bot li a {
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

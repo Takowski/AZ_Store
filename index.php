@@ -57,8 +57,8 @@
         foreach ($catalog as $item) {
           echo '<img src="' . $item['image_url'] . '" alt="' . $item['product'] . '">';
           echo '<h2>' . $item['id'] . '</h2>';
-          echo '<p>' . $item['product'] . '</p>';
-          echo '<p>Price: $' . $item['price'] . '</p>';
+          echo '<p class="name-shoe-main">' . $item['product'] . '</p>';
+          echo '<p class="price-shoe-main"> $' . $item['price'] . '</p>';
           echo '<div id="add-to-cart-' . $item['id'] . '">';
           echo '<button type="submit" name="add_item" value="' . $item['id'] . '">Add to cart</button>';
           echo '<hr>';
@@ -75,6 +75,24 @@
       aliquam consequuntur voluptates, quos veritatis quibusdam?
     </quote>
   </picture>
+
+  <div class="reviews">
+    <div class="review_one">
+      <img src="assets/style/img/image-emily.jpg" alt="Emily" class="img-emily">
+      <h3>Emily from xyz</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    <div class="review_two">
+      <img src="assets/style/img/image-thomas.jpg" alt="Thomas" class="img-thomas">
+      <h3>Thomas from corporate</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+    <div class="review_three">
+      <img src="assets/style/img/image-jennie.jpg" alt="Jennie" class="img-jennie">
+      <h3>Jennie from Nike</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+    </div>
+  </div>
   <?php include 'footer-display.php' ?>
 </body>
 
