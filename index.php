@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['cart'])) {
+  $_SESSION['cart'] = [];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,16 +24,13 @@
 </style>
 
 <body>
+
   <?php include 'header-display.php' ?>
 
   <main>
     <?php
-    session_start();
 
-    if (!isset($_SESSION['cart'])) {
-      $_SESSION['cart'] = [];
-    }
-
+//get the information of the products from the json file
     $json_data = file_get_contents('assets/json/catalog.json');
 
 
@@ -39,6 +44,7 @@
       if ($catalog === null) {
         echo 'Error decoding catalog data';
       } else {
+        //For each product in the catalog, display the image, the name, the price and a button to add it to the cart
         foreach ($catalog as $item) {
           echo '<img src="' . $item['image_url'] . '" alt="' . $item['product'] . '">';
           echo '<h2>' . $item['id'] . '</h2>';
@@ -54,15 +60,29 @@
       }
     };
 
+    // check if the "Add to cart" button was clicked
+    if (isset($_POST['add_item'])) {
+      // get the item ID from the form
+      $item_id = $_POST['item_id'];
+      // check if the item is not already in the cart
+      if (!isset($_SESSION['cart'][$item_id])) {
+        // get the item data from the catalog
+        $item = $catalog[$item_id];
+        // add the item to the cart with a quantity of 1
+        $_SESSION['cart'][$item_id] = array(
+          'id' => $item['id'],
+          'product' => $item['product'],
+          'price' => $item['price'],
+          'image_url' => $item['image_url'],
+          //number is the quantity of the item in the cart
+          'number' => 1
+        );
+        // if the item is already in the cart increase the quantity by 1
+      } else { 
+        $_SESSION['cart'][$item_id]['number']++;
+      }
+    }
     ?>
-<?php
-if (isset($_POST['add_item'])) {
-  $item_id = $_POST['item_id'];
-  if (!in_array($item_id, $_SESSION['cart'])) {
-    $_SESSION['cart'][] = $item_id;
-  }
-}
-?>
   </main>
   <picture>
     <img src="assets/style/img/shoe_two.png" alt=" a blurple shoe">
@@ -76,7 +96,3 @@ if (isset($_POST['add_item'])) {
 </body>
 
 </html>
-
-<!-- echo '<form action="add_to_cart.php" method="post">';
-        echo '<input type="hidden" name="item_id" value="' . $item['id'] . '">';
-        echo '<button type="submit">Add to cart</button>'; -->
